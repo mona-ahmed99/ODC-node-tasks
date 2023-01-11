@@ -1,0 +1,54 @@
+{{>header}}
+
+<form action="/search" method="post" class=" w-50 form-inline m-auto pt-3">
+    <input class="form-control w-75 mr-2" type="search" placeholder="Search..." aria-label="Search" name="search">
+    <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
+</form>
+
+<form action="/arrangeByName" method="post" class=" w-50 m-auto pt-3">
+<button class="btn btn-info">Sort By Name</button>
+</form>
+
+<form action="/arrangeByPages" method="post" class=" w-50 m-auto pt-3">
+<button class="btn btn-info">Sort By Num Of Pages</button>
+</form>
+
+<div class="w-75 m-auto py-5">
+    <table class="table text-center">
+        <thead>
+            <th>Id</th>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Section</th>
+            <th>Num Of Pages</th>
+            <th>Actions</th>
+
+        </thead>
+        <tbody>
+            {{#if hasBooks}}
+            {{#each result}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{bookName}}</td>
+                <td>{{author}}</td>
+                <td>{{section}}</td>
+                <td>{{numOfPages}}</td>
+                <td>
+                    <a href='/updateBook/{{id}}' class="btn btn-info">Update</a>
+                    <a href="/delBook/{{id}}" class="btn btn-danger">Delete</a>
+                </td>
+
+            </tr>
+            {{/each}}
+            {{else}}
+            <tr class="alert alert-danger">
+                <td colspan="6" class="text-center">No Books Yet</td>
+            </tr>
+            {{/if}}
+        </tbody>
+
+    </table>
+</div>
+
+
+{{>footer}}

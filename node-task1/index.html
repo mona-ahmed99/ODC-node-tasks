@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- ///////////////////Insert User Date////////////////// -->
+    <div class=" w-50 m-auto py-5">
+        <div class="form-group">
+            <label for="userName">User Name:</label>
+            <input class="form-control" type="text" id="userName">
+        </div>
+        <div class="form-group">
+            <label for="userAge">User Age:</label>
+            <input class="form-control" type="number" id="userAge">
+        </div>
+        <div class="form-group">
+            <label for="userPhone">Phone:</label>
+            <input class="form-control" type="number" id="userPhone">
+        </div>
+        <div class="form-group">
+            <label>Status:</label>
+            <br>
+            <input type="radio" name="status" value="active" id="userActive">
+            <label>Active</label>
+            <br>
+            <input type="radio" name="status" value="inactive" id="userInActive">
+            <label>In-Active</label>
+
+
+
+        </div>
+        <button id="addBtn" class="btn btn-outline-info">Add User</button>
+    </div>
+
+
+    <!-- ////////////////////display user data///////////////////////// -->
+
+
+
+    <div class="w-75 m-auto my-5">
+        <table class="table text-center">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Status</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>1</td>
+                    <td>mona</td>
+                    <td>22</td>
+                    <td>010637076456</td>
+                    <td>active</td>
+                    <td><button class="btn btn-info">Update</button></td>
+                    <td><button class="btn btn-danger">Delete</button></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- /////////////////////Model to update status///////////////////// -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="updateStatus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Status</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Status:</label>
+                        <br>
+                        <input type="radio" name="status" value="active" id="userModelActive">
+                        <label>Active</label>
+                        <br>
+                        <input type="radio" name="status" value="inactive" id="userModelInActive">
+                        <label>In-Active</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary saveBtn" data-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
